@@ -1,0 +1,28 @@
+{
+  "name": "streamlined-assessment",
+  "version": "1.0.0",
+  "description": "Put instructions on how to run your application here.",
+  "main": "src/pages/_app.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hookform/resolvers": "^2.9.10",
+    "@next/font": "^13.0.7",
+    "next": "^13.0.7",
+    "react": "^18.2.0",
+    "react-datepicker": "^4.8.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.31.0",
+    "react-select": "^5.7.0",
+    "styled-components": "^5.3.6",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+  }
+}
