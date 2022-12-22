@@ -22,11 +22,10 @@ const Total = () => {
       setSubtotal(tempSubtotal);
     });
   }, [allLineItems, watch]);
-
   const handleChange = (event) => {
     setInputs((previousInputs) => ({
       ...previousInputs,
-      [event.target.name]: parseFloat(event.target.value),
+      [event.target.name]: Number(event.target.value),
     }));
   };
 
@@ -39,12 +38,7 @@ const Total = () => {
       event.preventDefault();
     }
   };
-
-  const total =
-    subtotal -
-    (isPercentage ? (subtotal * inputs.discount) / 100 : inputs.discount) +
-    inputs.shipping +
-    inputs.tax;
+  const total = subtotal - (isPercentage ? (subtotal * inputs.discount) / 100 : inputs.discount) + inputs.shipping + inputs.tax;
   return (
     <TotalBody>
       <SubtotalContainer>
@@ -102,7 +96,7 @@ const Total = () => {
               <input
                 type="number"
                 name="discount"
-                value={inputs.discount ? inputs.discount : ""}
+                value={inputs.discount ? inputs.discount : ''}
                 placeholder={"0.00"}
                 onChange={handleChange}
                 onFocus={(event) => event.target.select()}
